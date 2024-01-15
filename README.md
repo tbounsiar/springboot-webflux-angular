@@ -16,11 +16,11 @@ This repository contains a simple example of a web application built using Sprin
    
       Using cmd as admin in Windows
       ```shell
-      mklink /D src/main/resources/public ../front/dist/front/browser
+      mklink /D src\main\resources\public %cd%\..\front\dist\front\browser
       ```
-      Using PowerShell in Windows
+      Using PowerShell as admin in Windows
       ```shell
-      New-Item -ItemType SymbolicLink -Path src/main/resources/public -Target ../front/dist/front/browser
+      New-Item -ItemType SymbolicLink -Path src/main/resources/public -Target "$PWD.Path/../front/dist/front/browser"
       ```
       Linux
       ```shell
@@ -28,5 +28,5 @@ This repository contains a simple example of a web application built using Sprin
       ```
    2. Run the following command to build and start the backend server:
       ```bash
-      mvn spring-boot:run
+      ./mvnw spring-boot:run
       ```
