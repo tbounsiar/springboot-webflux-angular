@@ -1,0 +1,6 @@
+.idea
+**/.vscode
+backend/target
+front/node_modules
+front/dist
+front/.angular
